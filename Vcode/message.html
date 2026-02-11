@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Message For You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 60px 20px;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, #B497BD, #FFD1C1);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Floating hearts & sparkles */
+    .floating {
+      position: fixed;
+      font-size: 18px;
+      opacity: 0.4;
+      animation: floatUp 8s linear infinite;
+      z-index: 0;
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(100vh) rotate(0deg); }
+      100% { transform: translateY(-10vh) rotate(360deg); }
+    }
+
+    /* Floating petals */
+    .petal {
+      position: fixed;
+      font-size: 24px;
+      opacity: 0.2;
+      animation: drift 12s linear infinite;
+      z-index: 0;
+    }
+    @keyframes drift {
+      0% { transform: translateY(100vh) rotate(0deg) translateX(0); }
+      100% { transform: translateY(-20vh) rotate(360deg) translateX(20vw); }
+    }
+
+    /* Container glassmorphism */
+    .container {
+      max-width: 950px;
+      margin: auto;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 40px;
+      border-radius: 35px;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.25);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Slideshow */
+    .slideshow-container {
+      position: relative;
+      max-width: 300px;
+      margin: auto;
+    }
+    .slides {
+      display: none;
+      width: 100%;
+      border-radius: 25px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .slides:hover {
+      transform: scale(1.05) rotate(-1deg);
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: 35px;
+      height: 35px;
+      margin-top: -17.5px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 24px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      user-select: none;
+      transition: 0.3s;
+    }
+    .prev:hover, .next:hover { background: rgba(255,255,255,0.4); }
+    .prev { left: -15px; }
+    .next { right: -15px; }
+
+    /* Message styling */
+    .message {
+      flex: 1.3;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-top: 20px;
+      white-space: pre-line;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.15);
+    }
+
+    /* Heart animation */
+    .heart {
+      font-size: 45px;
+      margin-top: 25px;
+      animation: beat 1.2s infinite;
+      text-align: center;
+    }
+    @keyframes beat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+      100% { transform: scale(1); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+      h2 { text-align: center; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Floating hearts & sparkles -->
+  <div class="floating" style="left:10%;">💜</div>
+  <div class="floating" style="left:30%; animation-delay:2s;">💖</div>
+  <div class="floating" style="left:50%; animation-delay:4s;">💜</div>
+  <div class="floating" style="left:70%; animation-delay:6s;">💖</div>
+  <div class="floating" style="left:90%; animation-delay:8s;">💜</div>
+
+  <!-- Floating petals -->
+  <div class="petal" style="left:5%; animation-delay:0s;">🌸</div>
+  <div class="petal" style="left:25%; animation-delay:3s;">🌸</div>
+  <div class="petal" style="left:50%; animation-delay:6s;">🌸</div>
+  <div class="petal" style="left:75%; animation-delay:9s;">🌸</div>
+  <div class="petal" style="left:90%; animation-delay:12s;">🌸</div>
+
+  <!-- Main container -->
+  <div class="container">
+
+    <!-- PHOTO SLIDESHOW -->
+    <div class="photo">
+      <div class="slideshow-container">
+        <img class="slides" src="bayot5.jpg" alt="Photo 1">
+        <img class="slides" src="bayot.jpg" alt="Photo 2">
+        <img class="slides" src="bayot6.jpg" alt="Photo 3">
+        <img class="slides" src="bayot3.jpg" alt="Photo 4">
+        <img class="slides" src="bayot7.jpg" alt="Photo 5">
+
+        <!-- Navigation -->
+        <button class="prev" onclick="plusSlides(-1)">❮</button>
+        <button class="next" onclick="plusSlides(1)">❯</button>
+      </div>
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="message">
+      <h2>💌 For You</h2>
+      <p>
+Hi Jhon Rey my Big BABY💖
+
+I just want you to tell you how special you are to me.
+Your handsome face, your presence, and your kindness mean more than words.
+Sorry if this feels a bit much—this is really all I can give you, and I hope you’ll appreciate it.
+I know it’s simple, but I truly gave my best and everything I know into this code.
+
+You know how I always tell you that you’re handsome, even if you don’t believe it yourself—we even end up arguing about it sometimes.
+I know a lot of people like you, but I still took the risk to confess, even knowing I didn’t really have a chance.
+And that’s okay. I never assumed you would return my feelings.
+
+It’s my first time confessing to a guy—and it had to be you, HAHAHA.
+Honestly, I felt so relieved after finally letting my feelings for you out.
+I’m happy that we became friends, and I hope nothing changes, even as time goes by.
+
+I hope you eventually find the one meant for you—someone who won’t give you trauma,
+who will love you genuinely and completely, no matter who you are.
+And I also hope you’ll find joy in your own life.
+
+I know you feel like you’re living only for your parents,
+but it hurts me that that’s the only reason you think you have to stay in this world.
+What about me, who loves you? HAHAHA.
+
+Please take care of yourself.
+I still have plans to take care of you in the future.
+If you haven’t found the one meant for you yet,
+I’ll baby you for now—before the real one who truly owns your heart comes along. Loveeeyaahhh XOXO
+
+That’s all. Muahhh 💋
+
+Thank you for being you 🌹
+Happy Valentine’s Day 💕
+      </p>
+      <div class="heart">❤️</div>
+    </div>
+
+  </div>
+
+  <!-- BACKGROUND MUSIC -->
+  <audio autoplay loop>
+    <source src="Stephen Bishop - It Might Be You (Lyrics).mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Manual Slideshow Script -->
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      let i;
+      const slides = document.getElementsByClassName("slides");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex-1].style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

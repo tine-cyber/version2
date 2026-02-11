@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Valentine's Day</title>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+/* ===== BASE ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #fff;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #B497BD, #FFD1C1);
+  overflow-x: hidden;
+}
+
+h1 { font-family: 'Sacramento', cursive; font-size: 60px; margin-bottom: 10px; }
+h2 { font-family: 'Sacramento', cursive; font-size: 45px; margin-bottom: 20px; }
+
+.heart { font-size: 55px; animation: beat 1s infinite; margin-bottom: 25px; }
+@keyframes beat { 50% { transform: scale(1.3); } }
+
+p { font-size: 20px; max-width: 650px; margin: 20px auto; line-height: 1.6; }
+.poem { text-align:center; font-style:italic; line-height:2; font-size:20px; color:#4B2C5E; max-width:650px; margin:0 auto; text-shadow:1px 1px 4px rgba(0,0,0,0.15); }
+
+/* ===== MENU ===== */
+.menu { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:40px; }
+.btn {
+  padding:15px 40px; font-size:20px; border:none; border-radius:50px;
+  background: linear-gradient(145deg, #B497BD, #FFD1C1); color:#fff;
+  cursor:pointer; transition:0.4s; box-shadow:0 8px 25px rgba(0,0,0,0.25);
+}
+.btn:hover { transform: scale(1.1); box-shadow:0 12px 30px rgba(0,0,0,0.35); }
+
+/* ===== SECTIONS ===== */
+.section {
+  display:none; margin-top:50px; padding:40px 25px; border-radius:35px;
+  background:rgba(255,255,255,0.18); backdrop-filter:blur(12px);
+  animation: fadeIn 1s ease; box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+@keyframes fadeIn { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
+
+/* ===== POLAROID PHOTOS ===== */
+.photos { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
+.polaroid { 
+  background: #fefcf3; /* vintage paper */
+  padding: 12px 12px 35px; width:190px; border-radius:10px; 
+  box-shadow:0 10px 25px rgba(0,0,0,0.3); border:2px solid #e0d9c1;
+  filter: contrast(0.95) brightness(1.05); animation: float 4s ease-in-out infinite;
+}
+.polaroid:nth-child(odd){ transform:rotate(-4deg); }
+.polaroid:nth-child(even){ transform:rotate(4deg); }
+.polaroid img{ width:100%; border-radius:6px; }
+@keyframes float { 50% { transform: translateY(-10px) rotate(2deg); } }
+
+/* ===== BACK BUTTON ===== */
+.back { margin-top:40px; padding:12px 30px; font-size:16px; border-radius:30px; border:none; cursor:pointer; color:#fff; background: linear-gradient(145deg, #FFD1C1, #B497BD); box-shadow:0 6px 20px rgba(0,0,0,0.25); transition:0.3s; }
+.back:hover { transform: scale(1.1); box-shadow:0 10px 30px rgba(0,0,0,0.35); }
+
+audio { margin-top:20px; width:80%; }
+
+/* ===== SUNFLOWER ===== */
+.sunflower-container { display:flex; justify-content:flex-end; margin-top:30px; position:relative; }
+.press-note {
+  position:absolute; top:-50px; right:140px;
+  background:#FFD1C1; color:#5D4037; font-weight:bold; font-family:'Literature',cursive;
+  padding:8px 12px; border-radius:20px; box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  animation: bounce 1s infinite alternate;
+}
+.press-note::after {
+  content:""; position:absolute; bottom:-10px; left:50%; transform:translateX(-50%);
+  border-width:10px; border-style:solid; border-color:#FFD1C1 transparent transparent transparent;
+}
+@keyframes bounce{0%{transform:translateY(0);} 100%{transform:translateY(-10px);} }
+
+.sunflower{ position:relative; width:220px; height:300px; cursor:pointer; }
+.petal{
+  position:absolute; width:50px; height:120px;
+  background:radial-gradient(circle at top,#FFF176,#FBC02D,#F57F17);
+  border-radius:50%; top:20px; left:85px; transform-origin:bottom center;
+  opacity:0; transform:scale(0); transition: all 0.6s ease;
+}
+.sunflower.bloom .petal{ opacity:1; }
+.petal:nth-child(1){ transform:rotate(0deg) scale(0); }
+.petal:nth-child(2){ transform:rotate(20deg) scale(0); }
+.petal:nth-child(3){ transform:rotate(40deg) scale(0); }
+.petal:nth-child(4){ transform:rotate(60deg) scale(0); }
+.petal:nth-child(5){ transform:rotate(80deg) scale(0); }
+.petal:nth-child(6){ transform:rotate(100deg) scale(0); }
+.petal:nth-child(7){ transform:rotate(120deg) scale(0); }
+.petal:nth-child(8){ transform:rotate(140deg) scale(0); }
+.petal:nth-child(9){ transform:rotate(160deg) scale(0); }
+.petal:nth-child(10){ transform:rotate(180deg) scale(0); }
+.petal:nth-child(11){ transform:rotate(200deg) scale(0); }
+.petal:nth-child(12){ transform:rotate(220deg) scale(0); }
+.petal:nth-child(13){ transform:rotate(240deg) scale(0); }
+.petal:nth-child(14){ transform:rotate(260deg) scale(0); }
+.petal:nth-child(15){ transform:rotate(280deg) scale(0); }
+.petal:nth-child(16){ transform:rotate(300deg) scale(0); }
+.petal:nth-child(17){ transform:rotate(320deg) scale(0); }
+.petal:nth-child(18){ transform:rotate(340deg) scale(0); }
+.sunflower.bloom .petal:nth-child(1){ transition-delay:0.1s; transform:rotate(0deg) scale(1);}
+.sunflower.bloom .petal:nth-child(2){ transition-delay:0.2s; transform:rotate(20deg) scale(1);}
+.sunflower.bloom .petal:nth-child(3){ transition-delay:0.3s; transform:rotate(40deg) scale(1);}
+.sunflower.bloom .petal:nth-child(4){ transition-delay:0.4s; transform:rotate(60deg) scale(1);}
+.sunflower.bloom .petal:nth-child(5){ transition-delay:0.5s; transform:rotate(80deg) scale(1);}
+.sunflower.bloom .petal:nth-child(6){ transition-delay:0.6s; transform:rotate(100deg) scale(1);}
+.sunflower.bloom .petal:nth-child(7){ transition-delay:0.7s; transform:rotate(120deg) scale(1);}
+.sunflower.bloom .petal:nth-child(8){ transition-delay:0.8s; transform:rotate(140deg) scale(1);}
+.sunflower.bloom .petal:nth-child(9){ transition-delay:0.9s; transform:rotate(160deg) scale(1);}
+.sunflower.bloom .petal:nth-child(10){ transition-delay:1s; transform:rotate(180deg) scale(1);}
+.sunflower.bloom .petal:nth-child(11){ transition-delay:1.1s; transform:rotate(200deg) scale(1);}
+.sunflower.bloom .petal:nth-child(12){ transition-delay:1.2s; transform:rotate(220deg) scale(1);}
+.sunflower.bloom .petal:nth-child(13){ transition-delay:1.3s; transform:rotate(240deg) scale(1);}
+.sunflower.bloom .petal:nth-child(14){ transition-delay:1.4s; transform:rotate(260deg) scale(1);}
+.sunflower.bloom .petal:nth-child(15){ transition-delay:1.5s; transform:rotate(280deg) scale(1);}
+.sunflower.bloom .petal:nth-child(16){ transition-delay:1.6s; transform:rotate(300deg) scale(1);}
+.sunflower.bloom .petal:nth-child(17){ transition-delay:1.7s; transform:rotate(320deg) scale(1);}
+.sunflower.bloom .petal:nth-child(18){ transition-delay:1.8s; transform:rotate(340deg) scale(1);}
+
+.center{ position:absolute; width:100px; height:100px; background:radial-gradient(circle,#5D4037,#3E2723); border-radius:50%; top:60px; left:60px; z-index:10; }
+.stem{ position:absolute; width:22px; height:320px; background:linear-gradient(to right,#2E7D32,#1B5E20,#2E7D32); top:230px; left:99px; border-radius:20px; box-shadow:inset -3px 0 5px rgba(0,0,0,0.3);}
+.branch{ position:absolute; width:120px; height:12px; background:linear-gradient(to right,#2E7D32,#1B5E20); top:310px; left:110px; border-radius:10px; transform:rotate(25deg);}
+.leaf{ position:absolute; width:120px; height:70px; background:linear-gradient(to right,#4CAF50,#1B5E20); border-radius:60% 40% 60% 40%; top:290px; left:-10px; transform:rotate(-40deg); box-shadow:0 5px 15px rgba(0,0,0,0.3);}
+.leaf::after{ content:""; position:absolute; width:2px; height:60px; background:rgba(255,255,255,0.4); left:55px; top:5px;}
+.leaf2{ position:absolute; width:120px; height:70px; background:linear-gradient(to right,#4CAF50,#1B5E20); border-radius:40% 60% 40% 60%; top:350px; left:180px; transform:rotate(35deg); box-shadow:0 5px 15px rgba(0,0,0,0.3);}
+.leaf2::after{ content:""; position:absolute; width:2px; height:60px; background:rgba(255,255,255,0.4); left:55px; top:5px; }
+
+/* musical notes */
+.note {
+  position:absolute; font-size:20px; animation: rise 2s ease-out forwards; color:#FFD700;
+}
+@keyframes rise {0%{opacity:1; transform:translateY(0) scale(1);}100%{opacity:0; transform:translateY(-100px) scale(1.5);}}
+</style>
+</head>
+<body>
+
+<!-- HOME -->
+<div id="home">
+  <h1>💘 Happy Valentine's Day 💘</h1>
+  <div class="heart">❤️</div>
+  <p>Choose what you want to see first 💕</p>
+  <div class="menu">
+    <button class="btn" onclick="showSection('photos')">📸 Photos of Us</button>
+    <button class="btn" onclick="showSection('message')">💌 Message</button>
+    <button class="btn" onclick="showSection('extra')">🎵 Something Extra</button>
+  </div>
+</div>
+
+<!-- PHOTOS -->
+<div id="photos" class="section">
+  <h2>📸 Photos of Us</h2>
+  <div class="photos">
+    <div class="polaroid"><img src="bayot5.jpg"></div>
+    <div class="polaroid"><img src="bayot.jpg"></div>
+    <div class="polaroid"><img src="bayot6.jpg"></div>
+    <div class="polaroid"><img src="bayot3.jpg"></div>
+    <div class="polaroid"><img src="bayot7.jpg"></div>
+  </div>
+  <button class="back" onclick="goBack()">← Back to Menu</button>
+</div>
+
+<!-- MESSAGE -->
+<div id="message" class="section">
+  <h2>💌 My Message</h2>
+  <p class="poem">
+Hi Jhon Rey my Big BABY💖<br><br>
+
+I just want you to tell you how special you are to me.<br>
+Your handsome face, your presence, and your kindness mean more than words.<br>
+Sorry if this feels a bit much—this is really all I can give you, and I hope you’ll appreciate it.<br>
+I know it’s simple, but I truly gave my best and everything I know into this code.<br><br>
+
+You know how I always tell you that you’re handsome, even if you don’t believe it yourself—we even end up arguing about it sometimes.<br>
+I know a lot of people like you, but I still took the risk to confess, even knowing I didn’t really have a chance.<br>
+And that’s okay. I never assumed you would return my feelings.<br><br>
+
+It’s my first time confessing to a guy—and it had to be you, HAHAHA.<br>
+Honestly, I felt so relieved after finally letting my feelings for you out.<br>
+I’m happy that we became friends, and I hope nothing changes, even as time goes by.<br><br>
+
+I hope you eventually find the one meant for you—someone who won’t give you trauma,<br>
+who will love you genuinely and completely, no matter who you are.<br>
+And I also hope you’ll find joy in your own life.<br><br>
+
+I know you feel like you’re living only for your parents,<br>
+but it hurts me that that’s the only reason you think you have to stay in this world.<br>
+What about me, who loves you? HAHAHA.<br><br>
+
+Please take care of yourself.<br>
+I still have plans to take care of you in the future.<br>
+If you haven’t found the one meant for you yet,<br>
+I’ll baby you for now—before the real one who truly owns your heart comes along. Loveeeyaahhh XOXO<br><br>
+
+That’s all. Muahhh💋<br><br>
+
+Thank you for being you🌹<br>
+Happy Valentine’s Day💕<br>
+  </p>
+  <button class="back" onclick="goBack()">← Back to Menu</button>
+</div>
+
+<!-- EXTRA -->
+<div id="extra" class="section">
+  <h2>🎵 Something Extra</h2>
+  <p style="color:black;">If I could wish one thing for you,<br>it would be peace, love, and happiness — always 🤍</p>
+  <audio controls>
+    <source src="Stephen Bishop - It Might Be You (Lyrics).mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- SUNFLOWER -->
+  <div class="sunflower-container">
+    <div class="press-note">TAP ME!</div>
+    <div class="sunflower" onclick="bloomAndNotes(this)">
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="center"></div>
+      <div class="stem"></div>
+      <div class="branch"></div>
+      <div class="leaf"></div>
+      <div class="leaf2"></div>
+    </div>
+  </div>
+
+  <button class="back" onclick="goBack()">← Back to Menu</button>
+</div>
+
+<script>
+function showSection(id){
+  document.getElementById("home").style.display="none";
+  document.querySelectorAll(".section").forEach(sec=>sec.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+function goBack(){
+  document.getElementById("home").style.display="block";
+  document.querySelectorAll(".section").forEach(sec=>sec.style.display="none");
+}
+
+/* TOGGLE BLOOM & NOTES */
+function bloomAndNotes(flower){
+  const blooming = flower.classList.contains("bloom");
+  if(blooming){
+    flower.classList.remove("bloom"); // retract petals
+  } else {
+    flower.classList.add("bloom"); // bloom petals
+    for(let i=0;i<5;i++){
+      const note = document.createElement("div");
+      note.className="note";
+      note.style.left=(Math.random()*50+70)+"px";
+      note.style.bottom="0px";
+      note.innerHTML="♪";
+      flower.appendChild(note);
+      setTimeout(()=>note.remove(),2000);
+    }
+  }
+}
+</script>
+
+</body>
+</html>
